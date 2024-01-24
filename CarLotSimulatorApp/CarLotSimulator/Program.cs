@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.WebSockets;
 
 namespace CarLotSimulator
 {
@@ -6,6 +7,58 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
+            
+            CarLot myCarLot = new CarLot();
+
+            
+            
+            
+            
+            
+            //Three different ways, dot, ois, 
+            //dot
+            Car Bronco = new Car();
+            Bronco.Make = "Ford";
+            Bronco.Model = "Bronco";
+            Bronco.Year = 1966;
+            Bronco.MakeEngineNoise("Vroom");
+            Bronco.MakeHonkNoise("Beep");
+            Bronco.IsDriveable = true;
+
+
+            //OIS
+            Car Ram = new Car() { Make = "Dodge", Model = "Ram", Year = 2024, EngineNoise = "BRRRRBBRBR", HonkNoise = "BROUMP", IsDriveable = true  };
+
+
+
+            //custom
+            Car Soul = new Car("Kia", "Soul", 2023, "vrr", "bep", false);
+
+
+
+
+            myCarLot.ListOfCars.Add(Bronco);
+            myCarLot.ListOfCars.Add(Ram);
+            myCarLot.ListOfCars.Add(Soul);
+
+
+
+            foreach(var car in myCarLot.ListOfCars)
+            {
+                Console.WriteLine($"{car.Make}");
+                Console.WriteLine($"{car.Model}");
+                Console.WriteLine($"{car.Year}");
+                Console.WriteLine($"{car.EngineNoise}");
+                Console.WriteLine($"{car.HonkNoise}");
+                Console.WriteLine($"{car.IsDriveable}");
+                
+            }
+
+
+
+
+
+
             //TODO
 
             //Create a seperate class file called Car
