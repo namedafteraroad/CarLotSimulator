@@ -7,7 +7,8 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
-            
+
+            // use the 3 cars in the Main() (from the previous exercise) and then each time you create a car do a Console.WriteLine() printing the current number of cars in the car lot.
             CarLot myCarLot = new CarLot();
 
             
@@ -25,16 +26,17 @@ namespace CarLotSimulator
             Bronco.MakeHonkNoise("Beep");
             Bronco.IsDriveable = true;
 
+            Console.WriteLine($"{CarLot.numberOfCars} cars in the lot");
 
             //OIS
             Car Ram = new Car() { Make = "Dodge", Model = "Ram", Year = 2024, EngineNoise = "BRRRRBBRBR", HonkNoise = "BROUMP", IsDriveable = true  };
 
-
+            Console.WriteLine($"{CarLot.numberOfCars} cars in the lot");
 
             //custom
             Car Soul = new Car("Kia", "Soul", 2023, "vrr", "bep", false);
 
-
+            Console.WriteLine($"{CarLot.numberOfCars} cars in the lot");
 
 
             myCarLot.ListOfCars.Add(Bronco);
@@ -43,16 +45,16 @@ namespace CarLotSimulator
 
 
 
-            foreach(var car in myCarLot.ListOfCars)
-            {
-                Console.WriteLine($"{car.Make}");
-                Console.WriteLine($"{car.Model}");
-                Console.WriteLine($"{car.Year}");
-                Console.WriteLine($"{car.EngineNoise}");
-                Console.WriteLine($"{car.HonkNoise}");
-                Console.WriteLine($"{car.IsDriveable}");
-                
-            }
+           // foreach(var car in myCarLot.ListOfCars)
+            //{
+            //    Console.WriteLine($"{car.Make}");
+            //    Console.WriteLine($"{car.Model}");
+            //    Console.WriteLine($"{car.Year}");
+            //    Console.WriteLine($"{car.EngineNoise}");
+            //    Console.WriteLine($"{car.HonkNoise}");
+            //    Console.WriteLine($"{car.IsDriveable}");
+           //     
+           // }
 
 
 
